@@ -1,24 +1,31 @@
 import { Link } from "react-router-dom";
 
 const RestaurantCard = ({ restaurant }) => {
+  console.log(restaurant);
   return (
     <div>
       <Link className="restaurant-card" to={`/restaurants/${restaurant._id}`}>
         <img
-
-                   className="restaurant-card-image"
-         
+          className="restaurant-card-image"
           src={restaurant.img}
-         
           alt={`${restaurant.name} picture`}
-        
         />
         <div className="restaurant-card-content">
           <h3 className="restaurant-name">{restaurant.name}</h3>
-          <p className="restaurant-city">{restaurant.city_name}</p>
-          {restaurant.tags.map((tag, index) => {
-            return <p key={index}>{tag.name}</p>;
-          })}
+          {restaurant.cityId ? (((((
+            <p className="restaurant-city">{restaurant.cityId.name}</p>
+
+
+
+
+          )          )          )          )          ) : null}
+          {restaurant.tagId ? (((((
+            <p className="restaurant-city">{restaurant.tagId.name}</p>
+          )
+          )
+          )
+          )
+          ) : null}
         </div>
       </Link>
     </div>
