@@ -1,11 +1,11 @@
-# PinYourInterest
-A WBS Coding School Team-Project (week 6 & 7)
+# HELP
+A WBS Coding School Cross-Over-Project (Batch #009 & #010)
 
 ---
 
 ### Table of Contents
 
-- [PinYourInterest](#pinyourinterest)
+- [HELP](#help)
     - [Table of Contents](#table-of-contents)
   - [Objective](#objective)
   - [Project Overview](#project-overview)
