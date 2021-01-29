@@ -121,7 +121,31 @@ const Api = {
     }
   },
   getRestaurantsFiltered: async (tag, city) => restaurants.slice(0, 3),
-  getTags: async () => tags,
-  getCities: async () => cities,
+  getTags: async (tag) => {
+    try {
+      const response = await axios.get(`${endpoint}tags/${tag}`);
+      if (response.data.data) {
+        return response.data.data;
+      } else {
+        return [];
+      }
+    } catch (error) {
+      console.error(error);
+      return [];
+    }
+  },
+  getCities: async (cities) => {
+    try {
+      const response = await axios.get(`${endpoint}cities/${cities}`);
+      if (response.data.data) {
+        return response.data.data;
+      } else {
+        return [];
+      }
+    } catch (error) {
+      console.error(error);
+      return [];
+    }
+  },
 };
 export default Api;
