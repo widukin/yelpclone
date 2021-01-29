@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# HELP
+A WBS Coding School Cross-Over-Project (Batch #009 & #010)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+### Table of Contents
 
-In the project directory, you can run:
+- [HELP](#help)
+    - [Table of Contents](#table-of-contents)
+  - [Objective](#objective)
+  - [Project Overview](#project-overview)
+  - [Demo](#demo)
+  - [Technologies & Tools](#technologies--tools)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Objective
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Create a tool that looks a lot like [YELP](https://www.yelp.de/berlin) with React and NodeJS.
 
-### `npm test`
+> Goal: Batch #009 Builds the Backend & Batch #010 the Frondend. Have fun getting crazy!
+>
+> Time: 1 day 
+> 
+> Team-Size: 5
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Project Overview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Demo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For DEMO, go to: link may be added []()
 
-### `npm run eject`
+## Technologies & Tools
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Technologies / Tools | Used | Notes |
+| :------------------- | :--- | :---- |
+| [React](https://reactjs.org)| :white_check_mark:   |       |
+| [React-Axios](https://github.com/sheaivey/react-axios)| Data :white_check_mark:     |   Data Fetch    |
+| JS ES6               | :white_check_mark:   |       |
+| JSX                  | :white_check_mark:   |       |
+| CSS3                 | :white_check_mark:   |       |
+| [Postman](https://www.postman.com) | :white_check_mark: | API Test|
+| [Github](https://github.com)| :white_check_mark:   |       |
+| [Trello](https://trello.com/b/wcvE9jJZ/contentful-react)| :white_check_mark:   |   Project Organisation    |
