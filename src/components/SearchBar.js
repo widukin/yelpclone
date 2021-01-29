@@ -12,14 +12,12 @@ const SearchBar = () => {
     Api.getTags("")
       .then((res) => {
         setTags(res);
-        console.log(res);
       })
   }, []);
   useEffect(() => {
     Api.getCities("")
       .then((res) => {
         setCities(res);
-        console.log(res);
       })
   }, []);
 
@@ -40,8 +38,6 @@ const SearchBar = () => {
     setValue({tag: "", city: ""});
   };
 
-  console.log(tags);
-
   return (    
   <div className="searchbar">
     <form
@@ -59,9 +55,8 @@ const SearchBar = () => {
       <datalist id="tags">
         {
           tags.map(tag => {
-            console.log(tag.name);
             return(
-              <option>{tag.name}</option>
+              <option key={tag._id}>{tag.name}</option>
             );
           })
         }
@@ -77,9 +72,8 @@ const SearchBar = () => {
       <datalist id="cities">
         {
           cities.map(city => {
-            console.log(city.name);
             return(
-              <option>{city.name}</option>
+              <option key={city._id}>{city.name}</option>
             );
           })
         }
