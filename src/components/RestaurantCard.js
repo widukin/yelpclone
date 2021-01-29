@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const RestaurantCard = ({ restaurant }) => {
-  console.log(restaurant);
   return (
     <div>
       <Link className="restaurant-card" to={`/restaurants/${restaurant._id}`}>
