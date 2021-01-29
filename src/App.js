@@ -13,10 +13,7 @@ function App() {
           <Route path="/restaurants/:id">
             <ViewRestaurant />
           </Route>
-          <Route path="/:search">
-            <ViewAllRestaurants />
-          </Route>
-          <Route path="/">
+          <Route path={["/tags/:tagId", "/cities/:cityId", "/"]}>
             <ViewAllRestaurants />
           </Route>
         </Switch>
