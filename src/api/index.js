@@ -109,7 +109,7 @@ const Api = {
       return null;
     }
   },
-  getRestaurantsFiltered: async (search) => restaurants.slice(0, 3),
+  getRestaurantsFiltered: async (tag, city) => restaurants.slice(0, 3),
   getTags: async () => tags,
   getCities: async () => cities,
 };
