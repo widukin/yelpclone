@@ -61,8 +61,8 @@ const restaurants = [
     tags: [{ tag_id: 1, name: "fresh" }],
   },
   {
-    id_: "5",
-    name: "restaurant 5",
+    id_: "6",
+    name: "restaurant 6",
     img: "https://picsum.photos/400/600",
     city_id: 2,
     city_name: "Berlin",
@@ -82,7 +82,7 @@ const cities = [
 const Api = {
   getAllRestaurants: () => restaurants,
   getRestaurantById: (id) =>
-    restaurants.find((retaurant) => (retaurant.id_ = id)),
+    restaurants.find((retaurant) => retaurant.id_ === id),
   getRestaurantsFiltered: (search) => restaurants.slice(0, 3),
   getTags: () => tags,
   getCities: () => cities,
