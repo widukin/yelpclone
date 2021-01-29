@@ -83,21 +83,32 @@ const cities = [
 
 const endpoint = "https://restaurants-api-group1.herokuapp.com/";
 const Api = {
-getAllRestaurants: async () => {
+  getAllRestaurants: async () => {
     try {
-        const response = await axios.get(endpoint+"restaurants");
-        if(response.data.data) {
-            return response.data.data;
-        } else {
-            return [];
-        }
-    } catch(error) {
-        console.error(error);
+      const response = await axios.get(`${endpoint}restaurants`);
+      if (response.data.data) {
+        return response.data.data;
+      } else {
         return [];
+      }
+    } catch (error) {
+      console.error(error);
+      return [];
     }
-},
-  getRestaurantById: async (id) =>
-    restaurants.find((retaurant) => retaurant.id_ === id),
+  },
+  getRestaurantById: async (id) => {
+    try {
+      const response = await axios.get(`${endpoint}restaurants/${id}`);
+      if (response.data.data) {
+        return response.data.data;
+      } else {
+        return null;
+      }
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
+  },
   getRestaurantsFiltered: async (search) => restaurants.slice(0, 3),
   getTags: async () => tags,
   getCities: async () => cities,
