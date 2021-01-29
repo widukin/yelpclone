@@ -87,3 +87,4 @@ const Api = {
   getTags: () => tags,
   getCities: () => cities,
 };
+export default Api;
