@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const restaurants = [
   {
     id_: "1",
@@ -79,12 +81,67 @@ const cities = [
   { city_id: 2, city_name: "Hamburg" },
 ];
 
+const endpoint = "https://restaurants-api-group1.herokuapp.com/";
 const Api = {
-  getAllRestaurants: () => restaurants,
-  getRestaurantById: (id) =>
-    restaurants.find((retaurant) => retaurant.id_ === id),
-  getRestaurantsFiltered: (search) => restaurants.slice(0, 3),
-  getTags: () => tags,
-  getCities: () => cities,
+  getAllRestaurants: async () => {
+    try {
+      const response = await axios.get(`${endpoint}restaurants`);
+      if (response.data.data) {
+        //just to check. can be deleted again.
+        console.log(response.data.data);
+        /* console.log(
+          response.data.data.filter(
+            (rest) =>
+              rest.cityId === "601416ca3d64d53e07465e94" &&
+              rest.tags[0].name === "fastfood"
+          )
+        );
+        console.log(
+          response.data.data.filter((rest) =>
+            rest.tags.filter((tag) => tag.name === "fastfood")
+          )
+        ); */
+        return response.data.data;
+      } else {
+        return [];
+      }
+    } catch (error) {
+      console.error(error);
+      return [];
+    }
+  },
+  getRestaurantById: async (id) => {
+    try {
+      const response = await axios.get(`${endpoint}restaurants/${id}`);
+      if (response.data.data) {
+        return response.data.data;
+      } else {
+        return null;
+      }
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
+  },
+  getRestaurantsFiltered: async (tag, city) => {
+    try {
+      const response = await axios.get(`${endpoint}restaurants`);
+      if (response.data.data) {
+        return response.data.data.filter(
+          (rest) => rest.cityId === city && rest.tags[0].name === tag
+        );
+      } else {
+        return [];
+      }
+    } catch (error) {
+      console.error(error);
+      return [];
+    }
+  },
+
+  // async (search) => restaurants.slice(0, 3),
+
+  getTags: async () => tags,
+  getCities: async () => cities,
 };
 export default Api;
