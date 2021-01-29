@@ -1,4 +1,6 @@
+import SearchBar from "./SearchBar";
+
 const TopBar = () => {
-  return <>I am comments</>;
+  return <><SearchBar /></>;
 };
 export default TopBar;
