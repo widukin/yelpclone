@@ -37,10 +37,10 @@ For DEMO, go to: link may be added []()
 | Technologies / Tools | Used | Notes |
 | :------------------- | :--- | :---- |
 | [React](https://reactjs.org)| :white_check_mark:   |       |
-| [React-Axios](https://github.com/sheaivey/react-axios)| Data :white_check_mark:     |   Data Fetch    |
+| [React-Axios](https://github.com/sheaivey/react-axios)| :white_check_mark:     |   Data Fetch    |
 | JS ES6               | :white_check_mark:   |       |
 | JSX                  | :white_check_mark:   |       |
 | CSS3                 | :white_check_mark:   |       |
 | [Postman](https://www.postman.com) | :white_check_mark: | API Test|
 | [Github](https://github.com)| :white_check_mark:   |       |
-| [Trello](https://trello.com/b/wcvE9jJZ/contentful-react)| :white_check_mark:   |   Project Organisation    |
+| [Trello](https://trello.com/invite/b/qTkLwmWp/45a31a375f992ede02a5d695f885cc66/yelp-clone-xovercodingteamone)| :white_check_mark:   |   Project Organisation    |
