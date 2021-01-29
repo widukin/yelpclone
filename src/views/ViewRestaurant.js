@@ -3,18 +3,20 @@ import { useParams } from "react-router-dom";
 import Api from "../api";
 
 const ViewRestaurant = () => {
-  const { _id } = useParams();
+  const { id } = useParams();
 
-  let [restaurant, setRestaurant] = useState({});
+  let [restaurant, setRestaurant] = useState(null);
 
   useEffect(() => {
     const requestData = async () => {
-      setRestaurant(await Api.getRestaurantById(_id));
+      const rest = await Api.getRestaurantById(id);
+      console.log(rest);
+      setRestaurant(await Api.getRestaurantById(id));
     };
     requestData();
-  }, [_id]);
+  }, [id]);
 
-  return (
+  return !restaurant ? null : (
     <div>
       <img src={restaurant.img} />
       <p>{restaurant.name}</p>
