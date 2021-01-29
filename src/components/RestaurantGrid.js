@@ -2,15 +2,9 @@ import RestaurantCard from "./RestaurantCard";
 
 const RestaurantGrid = ({ restaurants }) => {
   return (
-    <div>
+    <div className="restauran-grid">
       {restaurants.map((iteration, index) => {
-        return (
-          <RestaurantCard
-            key={index}
-            restaurant={iteration}
-            className="restaurant-card"
-          />
-        );
+        return <RestaurantCard key={index} restaurant={iteration} />;
       })}
     </div>
   );
