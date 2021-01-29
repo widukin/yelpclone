@@ -82,7 +82,7 @@ const cities = [
 const Api = {
   getAllRestaurants: () => restaurants,
   getRestaurantById: (id) =>
-    restaurants.find((retaurant) => retaurant.id_ === id),
+    restaurants.find((restaurant) => restaurant.id_ === id),
   getRestaurantsFiltered: (search) => restaurants.slice(0, 3),
   getTags: () => tags,
   getCities: () => cities,
