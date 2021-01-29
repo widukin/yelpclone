@@ -13,11 +13,11 @@ const ViewAllRestaurants = () => {
   useEffect(() => {
 
     search 
-    ? Api.getRestaurantsFiltered
-      .then((res) => setRestaurantsAll(res.data))
+    ? Api.getRestaurantsFiltered()
+      .then((res) => setRestaurantsAll(res))
       .catch((err) => console.error(err))
-    : Api.getAllRestaurants
-      .then((res) => setRestaurantsAll(res.data))
+    : Api.getAllRestaurants()
+      .then((res) => setRestaurantsAll(res))
       .catch((err) => {console.error(err)})
   }, [search]);
 
