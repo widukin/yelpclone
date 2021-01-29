@@ -80,6 +80,17 @@ const cities = [
   { city_id: 1, city_name: "Berlin" },
   { city_id: 2, city_name: "Hamburg" },
 ];
+/*const appendCity = async (restaurant) => {
+  const city = await axios.get(`${endpoint}cities/${restaurant.cityId}`);
+  restaurant.city_name = city.name;
+  return restaurant;
+};
+const appendTag = async (restaurant) => {
+  const tag = await axios.get(`${endpoint}tags/${restaurant.tagId}`);
+  restaurant.tag_name = tag.name;
+  return restaurant;
+};*/
+
 
 const endpoint = "https://restaurants-api-group1.herokuapp.com/";
 const Api = {

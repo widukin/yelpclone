@@ -19,13 +19,10 @@ const ViewRestaurant = () => {
 
   return !restaurant ? null : (
     <div className="view_restaurant">
-      
       <div className="view_restaurant_content">
         <h2>{restaurant.name}</h2>
-        <h4>{restaurant.city_name}</h4>
-        {restaurant.tags.map((tag) => {
-          return <p key={tag.id}>{tag.name}</p>;
-        })}
+        <h4>{/*restaurant.city_Id.name*/}</h4>
+        <h4>{/*restaurant.tag_name*/}</h4>
         <Comments comments={restaurant.comments}></Comments>
       </div>
       <img className="view_restaurant_image" src={restaurant.img} />
@@ -33,3 +30,6 @@ const ViewRestaurant = () => {
   );
 };
 export default ViewRestaurant;
+/*{restaurant.tags.map((tag) => {
+          return <p key={tag.id}>{tag.name}</p>;
+        })}*/
