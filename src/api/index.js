@@ -120,7 +120,8 @@ const Api = {
       return null;
     }
   },
-  getRestaurantsFiltered: async (tag, city) => restaurants.slice(0, 3),
+  // unfortunatly needed api endpoint were never provided
+  // getRestaurantsFiltered: async (tag, city) => restaurants.slice(0, 3),
   getTags: async (tag) => {
     try {
       const response = await axios.get(`${endpoint}tags/${tag}`);
