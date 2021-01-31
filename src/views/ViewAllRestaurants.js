@@ -19,15 +19,15 @@ const ViewAllRestaurants = () => {
     .then((res) => {
       console.log(res);
       let restaurantsFiltered = [];
-      
+      // TODO: add case for no matching results
       if (tagId || cityId) {
         res.forEach(restaurant => {
           if (restaurant.cityId) {
-            if (tagId === restaurant.tagId._id || cityId === restaurant.cityId._id) {
+            if (tagId === restaurant.tagId._id && cityId === restaurant.cityId._id) {
               restaurantsFiltered.push(restaurant);
             }
           } else if (restaurant.city_id) {
-            if (tagId === restaurant.tagId._id || cityId === restaurant.city_id) {
+            if (tagId === restaurant.tagId._id && cityId === restaurant.city_id) {
               restaurantsFiltered.push(restaurant);
             }
           }
@@ -39,25 +39,6 @@ const ViewAllRestaurants = () => {
       }
     })
     .catch((err) => {console.log("ERROR"); console.error(err)})
-
-/*     tagId
-    ? (
-
-      Api.getAllRestaurants()
-      .then((res) => {
-        let restaurantsByTag = [];
-        res.forEach(restaurant => {
-          if (tagId === restaurant.tagId._id) {
-            restaurantsByTag.push(restaurant);
-            setRestaurantsList(restaurantsByTag);
-          }
-        });
-      })
-      .catch((err) => console.error(err))
-    )
-    : Api.getAllRestaurants()
-      .then((res) => setRestaurantsList(res))
-      .catch((err) => {console.error(err)}) */
   }, [tagId, cityId]);
 
 
