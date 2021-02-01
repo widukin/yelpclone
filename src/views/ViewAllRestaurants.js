@@ -7,24 +7,44 @@ import RestaurantGrid from "../components/RestaurantGrid";
 import Api from "../api/index";
 
 const ViewAllRestaurants = () => {
-  const [restaurantsAll, setRestaurantsAll] = useState([]);
-  const { search } = useParams();
+  const [restaurantsList, setRestaurantsList] = useState([]);
+  const { tagId, cityId } = useParams();
+
 
   useEffect(() => {
+    console.log("tagId", tagId);
+    console.log("cityId", cityId);
 
-    search 
-    ? Api.getRestaurantsFiltered()
-      .then((res) => setRestaurantsAll(res))
-      .catch((err) => console.error(err))
-    : Api.getAllRestaurants()
-      .then((res) => setRestaurantsAll(res))
-      .catch((err) => {console.error(err)})
-  }, [search]);
+    Api.getAllRestaurants()
+    .then((res) => {
+      console.log(res);
+      let restaurantsFiltered = [];
+      // TODO: add case for no matching results
+      if (tagId || cityId) {
+        res.forEach(restaurant => {
+          if (restaurant.cityId) {
+            if (tagId === restaurant.tagId._id && cityId === restaurant.cityId._id) {
+              restaurantsFiltered.push(restaurant);
+            }
+          } else if (restaurant.city_id) {
+            if (tagId === restaurant.tagId._id && cityId === restaurant.city_id) {
+              restaurantsFiltered.push(restaurant);
+            }
+          }
+        });
+        console.log(restaurantsFiltered);
+        setRestaurantsList(restaurantsFiltered);
+      } else {
+        setRestaurantsList(res);
+      }
+    })
+    .catch((err) => {console.log("ERROR"); console.error(err)})
+  }, [tagId, cityId]);
 
 
   return(
     <>
-      <RestaurantGrid restaurants={restaurantsAll} />
+      <RestaurantGrid restaurants={restaurantsList} />
     </>
   );
 };

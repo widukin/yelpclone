@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const restaurants = [
+/* const restaurants = [
   {
     id_: "1",
     name: "restaurant 1",
@@ -79,7 +79,7 @@ const tags = [
 const cities = [
   { city_id: 1, city_name: "Berlin" },
   { city_id: 2, city_name: "Hamburg" },
-];
+]; */
 /*const appendCity = async (restaurant) => {
   const city = await axios.get(`${endpoint}cities/${restaurant.cityId}`);
   restaurant.city_name = city.name;
@@ -120,8 +120,33 @@ const Api = {
       return null;
     }
   },
-  getRestaurantsFiltered: async (tag, city) => restaurants.slice(0, 3),
-  getTags: async () => tags,
-  getCities: async () => cities,
+  // unfortunatly needed api endpoint were never provided
+  // getRestaurantsFiltered: async (tag, city) => restaurants.slice(0, 3),
+  getTags: async (tag) => {
+    try {
+      const response = await axios.get(`${endpoint}tags/${tag}`);
+      if (response.data.data) {
+        return response.data.data;
+      } else {
+        return [];
+      }
+    } catch (error) {
+      console.error(error);
+      return [];
+    }
+  },
+  getCities: async (cities) => {
+    try {
+      const response = await axios.get(`${endpoint}cities/${cities}`);
+      if (response.data.data) {
+        return response.data.data;
+      } else {
+        return [];
+      }
+    } catch (error) {
+      console.error(error);
+      return [];
+    }
+  },
 };
 export default Api;

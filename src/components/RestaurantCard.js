@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 
 const RestaurantCard = ({ restaurant }) => {
-  console.log(restaurant);
   return (
     <div>
       <Link className="restaurant-card" to={`/restaurants/${restaurant._id}`}>
         <img
           className="restaurant-card-image"
           src={restaurant.img}
-          alt={`${restaurant.name} picture`}
+          alt={`${restaurant.name}`}
         />
         <div className="restaurant-card-content">
           <h3 className="restaurant-name">{restaurant.name}</h3>

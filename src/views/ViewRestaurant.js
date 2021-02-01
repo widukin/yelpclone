@@ -25,7 +25,7 @@ const ViewRestaurant = () => {
         <h4>{/*restaurant.tag_name*/}</h4>
         <Comments comments={restaurant.comments}></Comments>
       </div>
-      <img className="view_restaurant_image" src={restaurant.img} />
+      <img className="view_restaurant_image" src={restaurant.img} alt={restaurant.name}/>
     </div>
   );
 };
