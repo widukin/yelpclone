@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const restaurants = [
+/* const restaurants = [
   {
     id_: "1",
     name: "restaurant 1",
@@ -79,7 +79,7 @@ const tags = [
 const cities = [
   { city_id: 1, city_name: "Berlin" },
   { city_id: 2, city_name: "Hamburg" },
-];
+]; */
 /*const appendCity = async (restaurant) => {
   const city = await axios.get(`${endpoint}cities/${restaurant.cityId}`);
   restaurant.city_name = city.name;
