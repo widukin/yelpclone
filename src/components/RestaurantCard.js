@@ -7,7 +7,7 @@ const RestaurantCard = ({ restaurant }) => {
         <img
           className="restaurant-card-image"
           src={restaurant.img}
-          alt={`${restaurant.name} picture`}
+          alt={`${restaurant.name}`}
         />
         <div className="restaurant-card-content">
           <h3 className="restaurant-name">{restaurant.name}</h3>
